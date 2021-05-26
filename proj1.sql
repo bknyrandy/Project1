@@ -88,16 +88,9 @@ UNION ALL
 select * from bbc where branch = 'Branch8';
 
 ----What are the beverages available on Branch10, Branch8, and Branch1?
-create table if not exists branch8n1 as select DISTINCT (drink)from branch1 
-union
-select DISTINCT (drink)from branch8;
---branch 10 is empty
-
---tabke i used for problem 3.1
---creating a table by apending branch1 and 8
-create table if not exists branch8n1 as select DISTINCT (drink)from branch1 
+create table if not exists branch8n1 as select DISTINCT * from branch1 
 union all
-select DISTINCT (drink)from branch8;
+select DISTINCT * from branch8;
 
 
 --used to display results of 3.1
